@@ -1,5 +1,6 @@
 *{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
@@ -8,15 +9,26 @@ body{
 /*HEADER*/
 
 .header{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center; /*выравнивание по центру*/
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /*выравнивание по центру*/
     padding: 20px 70px 20px 32px;
 }
 .menu-button{
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;                  /*рычаг управления блоками */
-    flex-direction: column;         /*смена расстановки оси блоков сверху вниз*/
-    justify-content: space-between; /*задаёт одинаковое расстояние между блоками*/
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;         /*смена расстановки оси блоков сверху вниз*/
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /*задаёт одинаковое расстояние между блоками*/
     background-color: #fff;
     width: 20px;
     height: 17px;
@@ -42,16 +54,30 @@ body{
     border-radius: 22px;
     max-width: 830px; /*максимальный размер*/
     width: 50%; /*половина ширины от родительского элемента*/
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-right: 17px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .input-search{
+  
     background-color: transparent;  /*прозрачный цвет фона*/
+    width: 100%;
+    outline: none;
     border: none;
     padding: 12px 23px 12px 23px;
 }
+/*.input-search:active, :hover, :focus { /*убирает рамку при активации input*
+    outline: 0;
+    outline-offset: 0;
+}*/
+
 .button-search{
     padding: 0;
     border: none;
@@ -62,13 +88,18 @@ body{
 }
 .icon-search{
     fill: #000;
+    touch-callout: none;
 }
 
     /*ICONS*/
 
 .icons{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-left: auto;
 }
 .icons-link{
