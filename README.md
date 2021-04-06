@@ -4,5 +4,5 @@
 ## Используемые технологии
 - HTML
 - SCC
-- Normalize css
+- Normalize.css
 - SVG Sprites
