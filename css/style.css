@@ -19,6 +19,12 @@ body{
     align-items: center; /*выравнивание по центру*/
     padding: 20px 70px 20px 32px;
     margin-bottom: 30px;
+    position: fixed;    /*закрепляем шапку */
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 99;
+    background-color: #fff;
 }
 .menu-button{
     padding: 0;
@@ -91,7 +97,7 @@ body{
 }
 .icon-search{
     fill: #000;
-    touch-callout: none;
+    touch-action: none;
 }
 
     /*ICONS*/
@@ -130,7 +136,21 @@ body{
     /*SIDEBAR*/
 
 .sidebar{
+    position: fixed;
+    top: 114px;
+    left: 0;
+    height: calc(100% - 114px);
+    width: 12%;
+    overflow-y: auto; /*автопрокрутка по оси -Y*/
     padding-left: 32px;
+    background-color: #fff;
+}
+.content{
+    width: 100%;
+    height: 400px;
+    margin-top: 85px;
+    padding-left: 15%;
+    padding-top: 30px;
 }
 .nav-menu{
     margin-top: 0px;
@@ -171,4 +191,200 @@ body{
     line-height: 23px;
     color: #000000;
     margin-bottom: 30px;
+}
+    /* CHANNEL */
+.channel{
+    position: relative;
+    margin-bottom: 50px;
+}
+.channel-title{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 26px;
+    color: #000;
+    line-height: 33px;
+    margin-bottom: 30px;
+}
+.channel-avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.channel-text{
+    margin-left: 20px;
+}
+.video-card{
+    width: 250px;       
+}
+.video-thumb{
+    width: 250px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 14px;
+    position: relative;
+}
+.thumbnail{
+    width: 250px;
+    height: 150px;
+    object-fit: cover; /*Исправляет сплющивание картинки*/
+}
+.video-duration{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.3);
+    mix-blend-mode: normal;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    padding: 3px 9px 3px 9px;
+}
+.video-title{
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #19202C;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+.video-info{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    font-size: 13px;
+    line-height: 16px;
+    color: #C2C2C2;
+}
+.video-counter{
+    display: flex;
+    align-items: center;
+}
+.video-views{
+    margin-right: 5px;
+}
+.video-views:after{
+    content: '';
+    width: 2px;
+    height: 2px;
+    background-color: #C2C2C2;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.slider-buttons{
+    position: absolute;
+    right: 8%;
+    top: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 66px;
+    height: 28px;
+}
+.channel-button{
+    cursor: pointer;
+}
+
+/* RECOMMENDED */
+
+.recommended{
+    position: relative;
+    margin-bottom: 50px;
+}
+.recommended-title{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 33px;
+    color: #19202C;
+    margin-bottom: 30px;
+}
+.rec-video-card{
+    width: 540px;
+}
+.rec-video-thumb{
+    width: 540px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 14px;
+    position: relative;
+}
+.rec-thumbnail{
+    width: 540px;
+    height: 250px;
+    object-fit: cover; /*Исправляет сплющивание картинки*/
+}
+.slider-rec-buttons{
+    position: absolute;
+    right: 8%;
+    top: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 66px;
+    height: 28px;
+}
+.recommended-button{
+    cursor: pointer;
+}
+
+/* FOOD & DRINK */
+.food{
+    position: relative;
+}
+.food-title{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 26px;
+    color: #000;
+    line-height: 33px;
+    margin-bottom: 30px;
+}
+.food-avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover; /*Исправляет сплющивание картинки*/
+}
+.food-text{
+    margin-left: 20px;
+}
+.food-recommended{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+    color: #C2C2C2;
+    margin-left: 20px;
+}
+.food-button{
+    cursor: pointer;
+}
+.sub{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    position: absolute;
+    right: 15%;
+    top: 12%;
+    display: flex;
+    align-items: center;
+    width: 155px;
+    height: 40px;
+    background-color: #ff0000;
+    border-radius: 20px;
+}
+.sub-text{
+    position: relative;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
 }
