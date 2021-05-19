@@ -1,4 +1,4 @@
-# Youtube-concept - учебный концепт "Glo Academy"
+# Youtube-concept - учебный концепт
 Проект выполнил WebGertsog
 
 ## Используемые технологии
